@@ -20,8 +20,8 @@ def filter_datum(fields: List[str], redaction: str, message: str,
     of certain field values
     """
     for field in fields:
-         replace = "{}={}{}".format(field, redaction, separator)
-         message = re.sub("{}=.*?{}".format(field, separator), replace, message)
+        replace = "{}={}{}".format(field, redaction, separator)
+        message = re.sub("{}=.*?{}".format(field, separator), replace, message)
     return message
 
 
